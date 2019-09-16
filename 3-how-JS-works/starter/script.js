@@ -1,17 +1,36 @@
+/**
+ * SECTION 3: How JavaScript Works Behind the Scenes
+ */
+
+ console.log(window.length);
+
+
 ///////////////////////////////////////
 // Lecture: Hoisting
 
 
+calculateAge(1965);
 
+// let calculateAge = function(year) {
+//     console.log(2019-year);
+// } //this doesn't working with hoisting b/c function is var
 
+function calculateAge(year) {
+    console.log(2019-year);
+}
 
+//variables
 
+console.log(age);
+var age = 23; 
 
-
-
-
-
-
+function foo() {
+    console.log(age); //undefined b/c of the local scope 
+    var age = 65;
+    console.log(age);
+}
+foo(); //prints 65 b/c of the local scope
+console.log(age); //prints 23
 
 
 
